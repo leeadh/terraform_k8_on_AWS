@@ -6,7 +6,7 @@ data "template_file" "master-userdata" {
 data "template_file" "worker-userdata" {
     template = "${file("scripts/worker.tpl")}"
 
-    vars {
+    vars = {
         masterIP = "${aws_instance.master.private_ip}"
     }
 }
