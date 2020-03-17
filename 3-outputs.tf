@@ -14,3 +14,11 @@ output "worker_node_public_ip" {
 output "worker_node_private_ip" {
   value = "${aws_instance.worker.*.private_ip}"
 }
+
+output "application_port" {
+  value = "32311"
+}
+
+output "database_port" {
+  value = "31273"
+}
